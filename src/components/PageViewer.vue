@@ -8,17 +8,5 @@
 <script>
 export default {
   props: ["page"],
-  //In case we want to pass default value to page prop
-  // props: {
-  //   page: {
-  //     type: Object,
-  //     default(rawProps) {
-  //       return {
-  //         pageTitle: "",
-  //         content: "",
-  //       };
-  //     },
-  //   },
-  // },
 };
 </script>
