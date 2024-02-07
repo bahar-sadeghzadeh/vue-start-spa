@@ -37,7 +37,7 @@ export default {
       this.pages = data;
     },
     pageCreated(pageObject) {
-      console.log(pageObject);
+      this.pages.push(pageObject);
     },
   },
 };
