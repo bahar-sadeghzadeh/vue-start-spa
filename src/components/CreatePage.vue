@@ -92,5 +92,12 @@ export default {
       this.published = true;
     },
   },
+  watch: {
+    pageTitle(newTitle, oldTitle) {
+      if (this.LinkText === oldTitle) {
+        this.LinkText = newTitle;
+      }
+    },
+  },
 };
 </script>
