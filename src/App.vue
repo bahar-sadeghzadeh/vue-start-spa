@@ -4,7 +4,7 @@
     :active-page="activePage"
     :nav-link-click="(index) => (activePage = index)"
   ></Navbar>
-  <PageViewer :page="pages[activePage]"></PageViewer>
+  <PageViewer v-if="pages.length > 0" :page="pages[activePage]"></PageViewer>
 </template>
 
 <script>
