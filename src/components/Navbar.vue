@@ -10,11 +10,12 @@
           class="nav-item"
           :key="index"
         >
-          <NavbarLink
+          <navbar-link
             :page="page"
+            :index="index"
             :isActive="activePage === index"
-            @click.prevent="navLinkClick(index)"
-          ></NavbarLink>
+            @actived="$emit('archived')"
+          ></navbar-link>
         </li>
       </ul>
       <form class="d-flex">
@@ -41,7 +42,7 @@ export default {
       return this.pages.filter((p) => p.published);
     },
   },
-  props: ["pages", "activePage", "navLinkClick"],
+  props: ["pages", "activePage"],
   data() {
     return {
       theme: "light",

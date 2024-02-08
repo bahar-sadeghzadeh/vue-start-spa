@@ -5,6 +5,7 @@
     aria-current="page"
     :href="page.link.url"
     :title="`This linke goes to ${page.link.text} page`"
+    @click.prevent="$bus.$emit('navbarLinkActivated', index)"
   >
     {{ page.link.text }}
   </a>
@@ -12,7 +13,7 @@
 
 <script>
 export default {
-  props: ["page", "isActive"],
+  props: ["page", "index", "isActive"],
   computed: {
     activeClasses() {
       return {
