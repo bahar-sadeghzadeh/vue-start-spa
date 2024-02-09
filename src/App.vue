@@ -1,8 +1,10 @@
 <template>
   <Navbar :pages="pages" :active-page="activePage"></Navbar>
-  <PageViewer v-if="pages.length > 0" :page="pages[activePage]"></PageViewer>
 
-  <create-page @page-created="pageCreated"></create-page>
+  <router-view></router-view>
+  <!-- <PageViewer v-if="pages.length > 0" :page="pages[activePage]"></PageViewer>
+
+  <create-page @page-created="pageCreated"></create-page> -->
 </template>
 
 <script>
