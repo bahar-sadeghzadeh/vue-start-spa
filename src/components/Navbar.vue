@@ -5,17 +5,19 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="#">My Vue</a>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li
+        <navbar-link
           v-for="(page, index) in publishedPages"
           class="nav-item"
           :key="index"
-        >
-          <navbar-link
-            :page="page"
-            :index="index"
-            :isActive="activePage === index"
-            @actived="$emit('archived')"
-          ></navbar-link>
+          :page="page"
+          :index="index"
+          :isActive="activePage === index"
+          @actived="$emit('archived')"
+        ></navbar-link>
+        <li>
+          <router-link to="/create" class="nav-link" aria-current="page">
+            Create Page
+          </router-link>
         </li>
       </ul>
       <form class="d-flex">
