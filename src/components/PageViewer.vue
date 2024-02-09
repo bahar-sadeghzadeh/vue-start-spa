@@ -7,6 +7,8 @@
 
 <script>
 export default {
-  props: ["page"],
+  created() {
+    // this.$route.params;
+  },
 };
 </script>
